@@ -1,0 +1,20 @@
+#define SMALL_WEAPON Promet
+#define STD_WEAPON Promet
+#define GL_WEAPON PrometGL
+#define AR_WEAPON MK200
+#define MMG_WEAPON SPMG
+#define DMR_WEAPON PrometMR
+#define LAUNCHER_WEAPON PCML
+#define LAUNCHER_HEAVY_WEAPON TitanAT
+#define SNIPER_WEAPON Lynx
+
+#define SMALL_WEAPON_MAG "30Rnd_65x39_caseless_msbs_mag"
+#define STD_WEAPON_MAG SMALL_WEAPON_MAG
+#define GL_WEAPON_MAG SMALL_WEAPON_MAG
+#define AR_WEAPON_MAG "200Rnd_65x39_cased_Box"
+#define MMG_WEAPON_MAG "130Rnd_338_Mag"
+#define DMR_WEAPON_MAG "30Rnd_65x39_caseless_msbs_mag"
+#define LAUNCHER_WEAPON_MAG_1 "NLAW_F"
+#define LAUNCHER_HEAVY_WEAPON_MAG_1 "Titan_AT"
+#define LAUNCHER_HEAVY_WEAPON_MAG_2 "Titan_AP"
+#define SNIPER_WEAPON_MAG "5Rnd_127x108_Mag"
