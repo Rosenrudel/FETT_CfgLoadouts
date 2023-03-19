@@ -1,4 +1,22 @@
-#define BASIC_MEDIC \
+#define BASIC_SOLDIER \
+{ \
+	{"ACE_fieldDressing",6}, \
+	{"ACE_morphine",2}, \
+	"ACE_tourniquet" \
+}
+
+#define BASIC_COMBAT_MEDIC \
+{ \
+	{"ACE_fieldDressing",15}, \
+	{"ACE_morphine",8}, \
+	{"ACE_epinephrine",8}, \
+	{"ACE_plasmaIV_250",8}, \
+	{"ACE_plasmaIV_500",2}, \
+	{"ACE_tourniquet",4}, \
+}
+
+
+#define IRONPACK_SOLDIER \
 { \
 	{"ACE_fieldDressing",4}, \
 	{"ACE_quikclot",4}, \
@@ -6,7 +24,7 @@
 	"ACE_tourniquet" \
 }
 
-#define COMBAT_MEDIC \
+#define IRONPACK_COMBAT_MEDIC \
 { \
 	{"ACE_fieldDressing",12}, \
 	{"ACE_packingBandage",12}, \
@@ -20,7 +38,7 @@
 	"ACE_surgicalKit" \
 }
 
-#define MEDIC \
+#define IRONPACK_MEDIC \
 { \
 	{"ACE_fieldDressing",24}, \
 	{"ACE_packingBandage",24}, \
@@ -36,6 +54,77 @@
 	"ACE_surgicalKit" \
 }
 
+#define HARDCORE_SOLDIER \
+{ \
+	{"ACE_fieldDressing",4}, \
+	{"ACE_quikclot",4}, \
+	{"ACE_morphine",2}, \
+	{"ACE_epinephrine",2}, \
+	"ACE_tourniquet", \
+	"kat_IV_16", \
+	"kat_chestSeal", \
+	"kat_PainkillerItem", \
+	"kat_guedel", \
+	"kat_Pulseoximeter", \
+	"kat_CaffeineItem", \
+	"kat_naloxone" \
+}
+
+#define HARDCORE_COMBAT_MEDIC \
+{ \
+	{"ACE_fieldDressing",12}, \
+	{"ACE_packingBandage",12}, \
+	{"ACE_quikclot",12}, \
+	{"ACE_elasticBandage",12}, \
+	{"ACE_morphine",8}, \
+	{"ACE_epinephrine",8}, \
+	{"ACE_salineIV_250",8}, \
+	{"ACE_tourniquet",4}, \
+	{"ACE_splint",2}, \
+	"ACE_surgicalKit", \
+	"kat_stethoscope", \
+	{"kat_IV_16", 10}, \
+	{"kat_chestSeal", 10}, \
+	{"kat_guedel", 10}, \
+	{"kat_naloxone", 5}, \
+	{"kat_TXA", 4}, \
+	{"kat_EACA", 2} \
+}
+
+#define HARDCORE_MEDIC \
+{ \
+	{"ACE_fieldDressing",24}, \
+	{"ACE_packingBandage",24}, \
+	{"ACE_quikclot",24}, \
+	{"ACE_elasticBandage",24}, \
+	{"ACE_morphine",16}, \
+	{"ACE_epinephrine",16}, \
+	{"ACE_salineIV_250",8}, \
+	{"ACE_salineIV_500",8}, \
+	{"ACE_salineIV",8}, \
+	{"ACE_tourniquet",8}, \
+	{"ACE_splint",4}, \
+	"ACE_surgicalKit", \
+	"kat_stethoscope", \
+	"kat_retractor", \
+	"kat_scalpel", \
+	"kat_clamp", \
+	{"kat_plate", 3}, \
+	{"kat_IV_16", 10}, \
+	{"kat_IO_FAST", 10}, \
+	{"kat_chestSeal", 10}, \
+	{"kat_guedel", 10}, \
+	{"kat_larynx", 10}, \
+	{"kat_naloxone", 5}, \
+	{"kat_TXA", 5}, \
+	{"kat_EACA", 5}, \
+	{"kat_lorazepam", 3}, \
+	{"kat_etomidate", 3}, \
+	{"kat_flumazenil", 3}, \
+	{"kat_nitroglycerin", 3}, \
+	{"kat_norepinephrine", 3} \
+}
+
 class BasicItems : ItemsClass {
 	grenades[] = {
 		{"HandGrenade",2},
@@ -44,7 +133,7 @@ class BasicItems : ItemsClass {
 		{"SmokeShellGreen",2},
 		{"SmokeShell",4}
 	};
-	medicMaterial[] = BASIC_MEDIC;
+	medicMaterial[] = IRONPACK_SOLDIER;
 };
 
 class SmallItems : BasicItems {
@@ -84,11 +173,11 @@ class SpecialGrenadesSmall : BasicItems {
 };
 
 class CombatMedicItems : SmallItems {
-	medicMaterial[] = COMBAT_MEDIC;
+	medicMaterial[] = IRONPACK_COMBAT_MEDIC;
 };
 
 class MedicItems : SpecialGrenadesSmall {
-	medicMaterial[] = MEDIC;
+	medicMaterial[] = IRONPACK_MEDIC;
 };
 
 /*
